@@ -1,0 +1,300 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #111;  /* Dark background */
+    color: #fff;
+}
+
+.cube-container {
+    perspective: 2500px; /* Increased perspective depth */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.cube-element {
+position: absolute;
+top: -100px;
+    width: 400px;
+    height: 400px;
+    margin: 50px;
+}
+
+.cube {
+    margin-left: 80px;
+    width: 240px;
+    height: 240px;
+    transform-style: preserve-3d;
+    transform-origin: 30%;  /* Ensures the rotation is around the exact center */
+    animation: rotateCube 40s infinite linear;
+}
+
+/* Keyframes for rotating the cube */
+@keyframes rotateCube {
+    0% {
+        transform: rotateX(-30deg) rotateY(45deg);
+    }
+    100% {
+        transform: rotateX(-30deg) rotateY(405deg); /* Full 360-degree rotation while keeping the X axis constant */
+    }
+}
+
+/* Cell as a 3D cube with 6 faces */
+.cell {
+    position: absolute;
+    width: 80px; /* Adjusted size for all cells */
+    height: 80px;
+    transform-style: preserve-3d;
+}
+
+.cell div {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.008);
+    border: 1px solid rgba(255, 255, 255, 0.008); /* Increase border visibility */
+    box-sizing: border-box;
+}
+
+/* Faces of the cube (front, back, left, right, top, bottom) */
+.cell .front  { transform: rotateY(  0deg) translateZ(40px); }
+.cell .back   { transform: rotateY(180deg) translateZ(40px); }
+.cell .left   { transform: rotateY(-90deg) translateZ(40px); }
+.cell .right  { transform: rotateY( 90deg) translateZ(40px); }
+.cell .top    { transform: rotateX( 90deg) translateZ(40px); }
+.cell .bottom { transform: rotateX(-90deg) translateZ(40px); }
+
+/* Correct positions for each of the 27 cells in a 3x3x3 grid */
+#cell-0 { transform: translate3d(-80px, -80px, -80px); }
+#cell-1 { transform: translate3d(0, -80px, -80px); }
+#cell-2 { transform: translate3d(80px, -80px, -80px); }
+
+#cell-3 { transform: translate3d(-80px, 0, -80px); }
+#cell-4 { transform: translate3d(0, 0, -80px); }
+#cell-5 { transform: translate3d(80px, 0, -80px); }
+
+#cell-6 { transform: translate3d(-80px, 80px, -80px); }
+#cell-7 { transform: translate3d(0, 80px, -80px); }
+#cell-8 { transform: translate3d(80px, 80px, -80px); }
+
+#cell-9 { transform: translate3d(-80px, -80px, 0); }
+#cell-10 { transform: translate3d(0, -80px, 0); }
+#cell-11 { transform: translate3d(80px, -80px, 0); }
+
+#cell-12 { transform: translate3d(-80px, 0, 0); }
+#cell-13 { transform: translate3d(0, 0, 0); }
+#cell-14 { transform: translate3d(80px, 0, 0); }
+
+#cell-15 { transform: translate3d(-80px, 80px, 0); }
+#cell-16 { transform: translate3d(0, 80px, 0); }
+#cell-17 { transform: translate3d(80px, 80px, 0); }
+
+#cell-18 { transform: translate3d(-80px, -80px, 80px); }
+#cell-19 { transform: translate3d(0, -80px, 80px); }
+#cell-20 { transform: translate3d(80px, -80px, 80px); }
+
+#cell-21 { transform: translate3d(-80px, 0, 80px); }
+#cell-22 { transform: translate3d(0, 0, 80px); }
+#cell-23 { transform: translate3d(80px, 0, 80px); }
+
+#cell-24 { transform: translate3d(-80px, 80px, 80px); }
+#cell-25 { transform: translate3d(0, 80px, 80px); }
+#cell-26 { transform: translate3d(80px, 80px, 80px); }
+
+.stimuli-buttons {
+position: absolute;
+bottom: 45px;
+    gap: 5px;
+}
+.e {
+    margin-top: 5px;
+}
+
+.ssbuttons {
+    position: absolute;
+    bottom: 220px;
+    left: 20px;
+}
+.ssbuttons button {
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #111;
+    border-radius: 3px;
+    padding: 12px 22px;
+    margin: 2px;
+}
+.stimuli-buttons button {
+    padding: 18px 28px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    border: 1px solid #222;
+    border-radius: 8px;
+}
+
+#settingsButton {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 15px 25px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 16px;
+}
+#historyButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.settings-menu {
+    position: fixed;
+    top: 0;
+    color: #fff;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #222;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    box-sizing: border-box;
+    transition: left 0.3s ease;
+    z-index: 2;
+}
+.history-menu {
+    position: fixed;
+    top: 0;
+    color: #fff;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #222;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    box-sizing: border-box;
+    transition: right 0.3s ease;
+    z-index: 2;
+}
+.history-menuu {
+    position: absolute;
+    top: 770px;
+    width: 400px;
+    color: #fff;
+    background-color: #222;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    box-sizing: border-box;
+    transition: right 0.3s ease;
+    z-index: 2;
+}
+
+.settings-menu.open {
+    left: 0;
+}
+.history-menu.open {
+    right: 0;
+}
+
+.close-settings-button {
+    margin-bottom: 20px;
+    padding: 12px 21px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #fff;
+    border-radius: 3px;
+}
+.close-history-button {
+    margin-bottom: 20px;
+    padding: 12px 21px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #fff;
+    border-radius: 3px;
+}
+.history-button {
+    color: #000;
+    margin-bottom: 20px;
+    padding: 12px 21px;
+    background-color: #fff;
+    font-size: 16px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+}
+.history-buttonn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: #000;
+    margin-bottom: 20px;
+    padding: 12px 21px;
+    background-color: #fff;
+    font-size: 16px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+}
+.settings-menu h2 {
+    margin-top: 0;
+}
+
+.settings-menu label {
+    display: block;
+    margin-top: 10px;
+}
+
+.settings-menu input,
+.settings-menu select {
+    width: 100%;
+    background-color: #444;
+    border: 1px solid #111;
+    border-radius: 3px;
+    color: #fff;
+    padding: 5px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+.rund {
+    background-color: #111;
+    padding: 3px 1px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    padding-left: 15px;
+}
+.rund p {
+    margin: 4px;
+}
+.esb {
+    padding: 6px 11px;
+    background-color: #111;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: #fff;
+    margin-top: 5px;
+}
+.esba {
+    padding: 11px 21px;
+    background-color: #111;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: #fff;
+    margin-top: 15px;
+    font-size: 16px;
+}
