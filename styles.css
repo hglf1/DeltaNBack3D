@@ -7,7 +7,14 @@ body {
     background-color: #111;  /* Dark background */
     color: #fff;
 }
-
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
 .cube-container {
     perspective: 2500px; /* Increased perspective depth */
     display: flex;
@@ -18,14 +25,15 @@ body {
 }
 .cube-element {
 position: absolute;
-top: -100px;
+top: -40px;
     width: 400px;
     height: 400px;
     margin: 50px;
 }
 
 .cube {
-    margin-left: 80px;
+    position: absolute;
+    left: 120px;
     width: 240px;
     height: 240px;
     transform-style: preserve-3d;
@@ -107,7 +115,7 @@ top: -100px;
 
 .stimuli-buttons {
 position: absolute;
-bottom: 45px;
+top: 80%;
     gap: 5px;
 }
 .e {
@@ -116,8 +124,8 @@ bottom: 45px;
 
 .ssbuttons {
     position: absolute;
-    bottom: 220px;
-    left: 20px;
+    top: 73%;
+    left: 25px;
 }
 .ssbuttons button {
     background-color: #222;
@@ -190,8 +198,8 @@ bottom: 45px;
 }
 .history-menuu {
     position: absolute;
-    top: 770px;
-    width: 400px;
+    top: 135%;
+    width: 100%;
     color: #fff;
     background-color: #222;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
