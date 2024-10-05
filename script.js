@@ -422,27 +422,35 @@ if (this.wsizee && this.worde) {
 }
 if (this.nd === 2) {
     this.dt = 'Dual'
+    this.maxstim = 10
 }
 if (this.nd === 3) {
     this.dt = 'Tri'
+    this.maxstim = 8
 }
 if (this.nd === 4) {
     this.dt = 'Quad'
+    this.maxstim = 6
 }
 if (this.nd === 5) {
     this.dt = 'Penta'
+    this.maxstim = 5
 }
 if (this.nd === 6) {
     this.dt = 'Hexa'
+    this.maxstim = 4
 }
 if (this.nd === 7) {
     this.dt = 'Septa'
+    this.maxstim = 3
 }
 if (this.nd === 8) {
     this.dt = 'Octa'
+    this.maxstim = 2
 }
 if (this.nd === 9) {
     this.dt = 'Nona'
+    this.maxstim = 2
 }
     
     if (!intervalId) {  // Only start a new interval if one isn't running
@@ -637,6 +645,34 @@ const wsize = wsizes[Math.floor(Math.random() * wsizes.length)];
     this.CharcHistory.push(charc)
     this.WordHistory.push(word)
     this.WsizeHistory.push(wsize)
+    if (this.CellHistory.length > this.maxstim) {
+        this.CellHistory.shift()
+    }
+    if (this.ColorHistory.length > this.maxstim) {
+        this.ColorHistory.shift()
+    }
+    if (this.CharHistory.length > this.maxstim) {
+        this.CharHistory.shift()
+    }
+    if (this.SizeHistory.length > this.maxstim) {
+        this.SizeHistory.shift()
+    }
+    if (this.PositionHistory.length > this.maxstim) {
+        this.CellHistory.shift()
+    }
+    if (this.RotationHistory.length > this.maxstim) {
+        this.ColorHistory.shift()
+    }
+    if (this.CharcHistory.length > this.maxstim) {
+        this.CharcHistory.shift()
+    }
+    if (this.WordHistory.length > this.maxstim) {
+        this.WordHistory.shift()
+    }
+    if (this.WsizeHistory.length > this.maxstim) {
+        this.WsizeHistory.shift()
+    }
+    
     
     // Apply the color to the selected cell
    highlightCell(cell, color, position, schar, size, rotation, charc, word, wsize);
