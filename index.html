@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D N-Back Cube</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="cube-element">
+    <div class="cube-container">
+        <div class="cube">
+              <div class="cell" id="cell-0">
+                <div class="front"></div><div class="back"></div><div class="left"></div><div class="right"></div><div class="top"></div><div class="bottom"></div>
+            </div>
+            <div class="cell" id="cell-1">
+                <div class="front"></div><div class="back"></div><div class="left"></div><div class="right"></div><div class="top"></div><div class="bottom"></div>
+            </div>
+                <div class="cell" id="cell-2">
+                <div class="front"></div><div class="back"></div><div class="left"></div><div class="right"></div><div class="top"></div><div class="bottom"></div>
+            </div>
+            <div class="cell" id="cell-3">
+                <div class="front"></div><div class="back"></div><div class="left"></div><div class="right"></div><div class="top"></div><div class="bottom"></div>
+            </div>
+                <div class="cell" id="cell-4">
+                <div class="front"></div><div class="back"></div><div class="left"></div><div class="right"></div><div class="top"></div><div class="bottom"></div>
+            </div>
+            <div class="cell" id="cell-5">
+                <div class="front"></div><div class="back"></div><div class="left"></div><div class="right"></div><div class="top"></div><div class="bottom"></div>
+            </div>
+                <div class="cell" id="cell-6">
+                <div class="front"></div><div class="back"></div><div class="left"></div><div class="right"></div><div class="top"></div><div class="bottom"></div>
+            </div>
+            <div class="cell" id="cell-7">
+                <div class="front"></div><div class="back"></div><div class="left"></div><div class="right"></div><div class="top"></div><div class="bottom"></div>
+            </div>
+                <div class="cell" id="cell-8">
+                <div class="front"></div><div class="back"></div><div class="left"></div><div class="right"></div><div class="top"></div><div class="bottom"></div>
+            </div>
+            <div class="cell" id="cell-9">
+                <div class="front"></div><div class="back"></div><div class="left"></div><div class="right"></div><div class="top"></div><div class="bottom"></div>
+            </div>
+                <div class="cell" id="cell-10">
+                <div class="front"></div><div class="back"></div><div class="left"></div><div class="right"></div><div class="top"></div><div class="bottom"></div>
+            </div>
+            <div class="cell" id="cell-11">
+                <div class="front"></div><div class="back"></div><div class="left"></div><div class="right"></div><div class="top"></div><div class="bottom"></div>
+            </div>
+                <div class="cell" id="cell-12">
+                <div class="front"></div><div class="back"></div><div class="left"></div><div class="right"></div><div class="top"></div><div class="bottom"></div>
+            </div>
+            <div class="cell" id="cell-13">
+                <div class="front"></div><div class="back"></div><div class="left"></div><div class="right"></div><div class="top"></div><div class="bottom"></div>
+            </div>
+                <div class="cell" id="cell-14">
+                <div class="front"></div><div class="back"></div><div class="left"></div><div class="right"></div><div class="top"></div><div class="bottom"></div>
+            </div>
+            <div class="cell" id="cell-15">
+                <div class="front"></div><div class="back"></div><div class="left"></div><div class="right"></div><div class="top"></div><div class="bottom"></div>
+            </div>
+                <div class="cell" id="cell-16">
+                <div class="front"></div><div class="back"></div><div class="left"></div><div class="right"></div><div class="top"></div><div class="bottom"></div>
+            </div>
+            <div class="cell" id="cell-17">
+                <div class="front"></div><div class="back"></div><div class="left"></div><div class="right"></div><div class="top"></div><div class="bottom"></div>
+            </div>
+                <div class="cell" id="cell-18">
+                <div class="front"></div><div class="back"></div><div class="left"></div><div class="right"></div><div class="top"></div><div class="bottom"></div>
+            </div>
+            <div class="cell" id="cell-19">
+                <div class="front"></div><div class="back"></div><div class="left"></div><div class="right"></div><div class="top"></div><div class="bottom"></div>
+            </div>
+                <div class="cell" id="cell-20">
+                <div class="front"></div><div class="back"></div><div class="left"></div><div class="right"></div><div class="top"></div><div class="bottom"></div>
+            </div>
+            <div class="cell" id="cell-21">
+                <div class="front"></div><div class="back"></div><div class="left"></div><div class="right"></div><div class="top"></div><div class="bottom"></div>
+            </div>
+                <div class="cell" id="cell-22">
+                <div class="front"></div><div class="back"></div><div class="left"></div><div class="right"></div><div class="top"></div><div class="bottom"></div>
+            </div>
+            <div class="cell" id="cell-23">
+                <div class="front"></div><div class="back"></div><div class="left"></div><div class="right"></div><div class="top"></div><div class="bottom"></div>
+            </div>
+                <div class="cell" id="cell-24">
+                <div class="front"></div><div class="back"></div><div class="left"></div><div class="right"></div><div class="top"></div><div class="bottom"></div>
+            </div>
+            <div class="cell" id="cell-25">
+                <div class="front"></div><div class="back"></div><div class="left"></div><div class="right"></div><div class="top"></div><div class="bottom"></div>
+            </div>
+                <div class="cell" id="cell-26">
+                <div class="front"></div><div class="back"></div><div class="left"></div><div class="right"></div><div class="top"></div><div class="bottom"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Stimuli Buttons -->
+    <div class="ssbuttons">
+        <button id="startBtn">start</button>
+        <button id="stopBtn">stop</button>
+    </div>
+      <div class="stimuli-buttons">
+          <div>
+        <button id="cellBtn">Cell</button>
+        <button id="colorBtn">Color</button>
+        <button id="charBtn">Char</button>
+        <button id="charcBtn">C-Color</button>
+      </div>
+      <div class="e">
+          <button id="wordBtn">Word</button>
+          <button id="wsizeBtn">W-Size</button>
+          <button id="positionBtn">Position</button>
+          <button id="sizeBtn">Size</button>
+      </div>
+      <div class="e">
+    
+        <button id="rotationBtn">Rotation</button>
+        
+        </div>
+        </div>
+    <div class="history-menuu">
+    <h2>History</h2>
+    <a href="info.html" class="history-buttonn">Info</a>
+    <div class="rund">
+    <h4>run 0: </h4>
+    <p id="lr">Avg acc: </p>
+    <p id="lrs">Stimuli: </p>
+    <p id="lri">Iterations: </p>
+    <p id="lrdd">Dimensions: </p>
+    <p id="lrn">N: </p>
+    <p id="lrd">Interval: </p>
+    </div>
+    <div class="rund">
+    <h4>run 1: </h4>
+    <p id="ra">Avg acc: </p>
+    <p id="ras">Stimuli: </p>
+    <p id="rai">Iterations: </p>
+    <p id="radd">Dimensions: </p>
+    <p id="ran">N: </p>
+    <p id="rad">Interval: </p>
+    </div>
+    <div class="rund">
+    <h4>run 2: </h4>
+    <p id="rb">Avg acc: </p>
+    <p id="rbs">Stimuli: </p>
+    <p id="rbi">Iterations: </p>
+    <p id="rbdd">Dimensions: </p>
+    <p id="rbn">N: </p>
+    <p id="rbd">Interval: </p>
+    </div>
+    <div class="rund">
+    <h4>run 3: </h4>
+    <p id="rc">Avg acc: </p>
+    <p id="rcs">Stimuli: </p>
+    <p id="rci">Iterations: </p>
+    <p id="rcdd">Dimensions: </p>
+    <p id="rcn">N: </p>
+    <p id="rcd">Interval: </p>
+    </div>
+    <div class="rund">
+    <h4>run 4: </h4>
+    <p id="rd">Avg acc: </p>
+    <p id="rds">Stimuli: </p>
+    <p id="rdi">Iterations: </p>
+    <p id="rddd">Dimensions: </p>
+    <p id="rdn">N: </p>
+    <p id="rdd">Interval: </p>
+    </div>
+    <div class="rund">
+    <h4>run 5: </h4>
+    <p id="re">Avg acc: </p>
+    <p id="res">Stimuli: </p>
+    <p id="rei">Iterations: </p>
+    <p id="redd">Dimensions: </p>
+    <p id="ren">N: </p>
+    <p id="red">Interval: </p>
+    </div>
+    </div>
+<button id="settingsButton">Settings</button>
+<button id="historyButton">Progress</button>
+<div id="historyMenu" class="history-menu">
+    <button id="closeHistoryButton" class="close-history-button">Close</button>
+    <p id="sc">Stimuli: </p>
+    <p id="ic">Iterations: </p>
+    <p id="ac">Accuracy: </p>
+    <p>--------------</p>
+</div>
+    <div id="settingsMenu" class="settings-menu">
+        <button id="closeSettingsButton" class="close-settings-button">Close</button>
+        <h2>Settings</h2>
+        <label for="delayInterval">Delay Interval:</label>
+        <input type="number" id="delayIntervalc" value="2000" min="10">
+        <br>
+        <label for="N">N value:</label>
+        <input type="number" id="Nvalueinput" value="1" min="1">
+        <br>
+        <label for="s">Stimuli:</label>
+        <button id="echar" class="esb">char</button>
+        <button id="esize" class="esb">size</button>
+        <button id="eccolor" class="esb">c-color</button>
+        <button id="erotation" class="esb">rotation</button>
+        <button id="eword" class="esb">word</button>
+        <button id="ewsize" class="esb">wsize</button>
+        <button id="eall" class="esb">all</button>
+        <br>
+        <button id="dme" class="esba">Difference Mode</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
